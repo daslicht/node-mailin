@@ -53,19 +53,19 @@ Install Node-Mailin globally.
 sudo npm install -g node-mailin
 ```
 
-Run it, (addtionnal help can be found using `node-mailin --help`). By default, Node-Mailin will listen on port 25, the standard smtp port. you can change this port for testing purpose using the `--port` option. However, do not change this port if you want to receive emails from the real world.
+Run it, (addtionnal help can be found using `nodeMailin --help`). By default, Node-Mailin will listen on port 25, the standard smtp port. you can change this port for testing purpose using the `--port` option. However, do not change this port if you want to receive emails from the real world.
 
 Ports number under 1000 are reserved to root user. So two options here. Either run Node-Mailin as root:
 
 ```
-sudo node-mailin --port 25
+sudo nodeMailin --port 25
 ```
 
 Or, prefered choice, use something like `authbind` to run Node-Mailin with a standard user while still using port 25.
 Here comes a [tutorial on how to setup authbind](http://respectthecode.tumblr.com/post/16461876216/using-authbind-to-run-node-js-on-port-80-with-dreamhost). In this case, do something like:
 
 ```
-authbind --deep node-mailin --port 25
+authbind --deep nodeMailin --port 25
 ```
 
 and make sure that your user can write to the log file.
